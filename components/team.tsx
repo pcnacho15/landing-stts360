@@ -1,9 +1,9 @@
 "use client";
-import { useRef, useEffect } from "react";
 import { Linkedin, Mail } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "./ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import * as React from "react";
 
 const team = [
   {
@@ -34,7 +34,7 @@ const team = [
 
 export function Team() {
 
-  const plugin = useRef(
+  const plugin = React.useRef(
     Autoplay({ delay: 2000, stopOnInteraction: true })
   );
 
@@ -59,13 +59,13 @@ export function Team() {
 
         {/* <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"> */}
         <Carousel
-          // plugins={[plugin.current]}
+          plugins={[plugin.current]}
           opts={{
             align: "start",
           }}
           className="w-full"
-          // onMouseEnter={plugin.current.stop}
-          // onMouseLeave={plugin.current.reset}
+          onMouseEnter={plugin.current.stop}
+          onMouseLeave={plugin.current.reset}
         >
           <CarouselContent>
             {team.map((member, index) => (

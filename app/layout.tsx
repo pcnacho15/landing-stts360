@@ -8,28 +8,19 @@ const _inter = Inter({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "SafeWork Pro | Seguridad y Salud en el Trabajo",
+  title: "SST360 | Seguridad y Salud en el Trabajo",
   description:
     "Expertos en seguridad y salud ocupacional. Protegemos a su empresa y sus colaboradores con soluciones integrales de SST.",
-  generator: "v0.app",
+  // generator: "v0.app",
   icons: {
     icon: [
       {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
+        url: "/logo.png",
+        // type: "image/svg+xml",
       },
     ],
-    apple: "/apple-icon.png",
   },
-}
+};
 
 export default function RootLayout({
   children,

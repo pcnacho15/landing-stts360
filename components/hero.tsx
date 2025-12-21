@@ -26,14 +26,14 @@ export function Hero() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-primary-foreground">
-            <span className="inline-block px-4 py-2 bg-linear-to-r from-[#69B4BB] to-[#5c9aa0] text-accent-foreground text-sm font-semibold rounded-full mb-6">
+            <span className="inline-block px-4 py-2 bg-linear-to-r from-[#69B4BB] to-[#5c9aa0] text-accent-foreground text-sm font-semibold rounded-full mb-6 animate-zoom-in delay-150">
               Líderes en SST
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-balance">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-balance animate-zoom-in">
               Protegemos lo más valioso de su empresa:
               <span className="text-[#8dcdd3]"> su gente</span>
             </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/80 mb-8 leading-relaxed max-w-xl">
+            <p className="text-lg md:text-xl text-primary-foreground/80 mb-8 leading-relaxed max-w-xl animate-zoom-in">
               Soluciones integrales en seguridad y salud ocupacional para
               garantizar ambientes de trabajo seguros y productivos.
             </p>
@@ -42,7 +42,7 @@ export function Hero() {
               {benefits.map((benefit, index) => (
                 <li
                   key={index}
-                  className="flex items-center gap-3"
+                  className="flex items-center gap-3 animate-zoom-in"
                 >
                   <CheckCircle className="h-5 w-5 text-[#69B4BB] shrink-0" />
                   <span className="text-primary-foreground/90">{benefit}</span>
@@ -50,7 +50,7 @@ export function Hero() {
               ))}
             </ul>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 animate-bouncing">
               <Button
                 size="lg"
                 className="group bg-linear-to-r from-[#69B4BB] to-[#5c9aa0] hhover:from-[#0B4791]/90 hover:to-[#69B4BB]/90 text-accent-foreground cursor-pointer"
@@ -83,7 +83,7 @@ export function Hero() {
               </p>
             </div>
             <div className="absolute -top-6 -right-6 bg-card p-6 rounded-xl shadow-xl animate-zoom-in delay-250">
-              <p className="text-4xl font-bold text-[#69B4BB]">500+</p>
+              <p className="text-4xl font-bold text-[#69B4BB]">200+</p>
               <p className="text-muted-foreground text-sm">
                 Empresas protegidas
               </p>

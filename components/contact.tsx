@@ -13,22 +13,17 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Dirección",
-    content: "Av. Principal 1234, Oficina 501\nCiudad, País",
+    content: "Medellín - Antioquia",
   },
   {
     icon: Phone,
     title: "Teléfono",
-    content: "+1 (234) 567-8900\n+1 (234) 567-8901",
+    content: "+57 (314) 681-6353",
   },
   {
     icon: Mail,
     title: "Email",
-    content: "contacto@safeworkpro.com\ninfo@safeworkpro.com",
-  },
-  {
-    icon: Clock,
-    title: "Horario",
-    content: "Lunes a Viernes: 8:00 - 18:00\nSábados: 9:00 - 13:00",
+    content: "asesoriasvg.sst@gmail.com",
   },
 ]
 
@@ -48,7 +43,7 @@ export function Contact() {
 
   return (
     <section id="contacto" className="py-20 md:py-28 bg-muted/30">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-accent font-semibold text-sm uppercase tracking-wider">Contacto</span>
           <h2 className="text-3xl md:text-4xl font-bold mt-4 mb-6 text-foreground text-balance">
@@ -63,7 +58,7 @@ export function Contact() {
           <div className="lg:col-span-2 space-y-8">
             {contactInfo.map((item, index) => (
               <div key={index} className="flex gap-4">
-                <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center shrink-0">
                   <item.icon className="h-6 w-6 text-accent" />
                 </div>
                 <div>
@@ -111,7 +106,7 @@ export function Contact() {
                   <Input
                     id="phone"
                     type="tel"
-                    placeholder="+1 (234) 567-8900"
+                    placeholder="+57 (305) 487-3226"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     className="bg-background"
@@ -144,7 +139,7 @@ export function Contact() {
                   className="bg-background resize-none"
                 />
               </div>
-              <Button type="submit" size="lg" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
+              <Button type="submit" size="lg" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground cursor-pointer">
                 Enviar mensaje
                 <Send className="ml-2 h-5 w-5" />
               </Button>

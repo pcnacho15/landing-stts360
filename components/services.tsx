@@ -1,39 +1,59 @@
-import { Shield, FileCheck, GraduationCap, Stethoscope, AlertTriangle, ClipboardList } from "lucide-react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import {
+  Shield,
+  FileCheck,
+  GraduationCap,
+  TrafficCone,
+  PencilLine,
+  HeartPulse,
+  ArrowRight,
+} from "lucide-react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "./ui/button";
 
 const services = [
   {
     icon: Shield,
-    title: "Sistema de Gestión SST",
+    title: "Plan Administrativo de Seguridad y Salud en el Trabajo (SG-SST)",
     description:
-      "Implementación y mantenimiento del SG-SST según la normativa vigente para garantizar el cumplimiento legal.",
+      "Implementación y gestión de sistemas de seguridad y salud en el trabajo conforme a la normativa vigente.",
   },
   {
     icon: FileCheck,
-    title: "Auditorías de Seguridad",
-    description: "Evaluaciones exhaustivas para identificar riesgos y oportunidades de mejora en su organización.",
+    title: "Plan Actualización SG-SST",
+    description:
+      "Ofrecer apoyo integral en la gestión y actualización de la documnentación del Sistema de Gestión de Seguridad y Salud en el Trabajo (SG-SST).",
   },
   {
     icon: GraduationCap,
-    title: "Capacitaciones",
-    description: "Programas de formación personalizados para todos los niveles de su empresa en temas de SST.",
+    title: "Acompañamiento en Capacitaciones SG-SST",
+    description:
+      "Programas de formación personalizados para todos los niveles de su empresa en temas del Sistema de Gestión de Seguridad y Salud en el Trabajo (SG-SST).",
   },
   {
-    icon: Stethoscope,
-    title: "Medicina Laboral",
-    description: "Exámenes médicos ocupacionales, programas de vigilancia epidemiológica y promoción de la salud.",
+    icon: TrafficCone,
+    title: "Plan Estratégico de Seguridad Vial",
+    description:
+      "Analizar estrategias y acciones concretas para reducir accidentes viales y fomentar un entorno más seguro para todos.",
   },
   {
-    icon: AlertTriangle,
+    icon: PencilLine,
     title: "Análisis de Riesgos",
-    description: "Identificación, evaluación y control de peligros para prevenir accidentes y enfermedades laborales.",
+    description:
+      "Apoyar a nuestros clientes para diseñar un Sistema de Gestión de Seguridad y Salud en el Trabajo (SG-SST) efectivo y conforme a la normativa vigente.",
   },
   {
-    icon: ClipboardList,
-    title: "Investigación de Incidentes",
-    description: "Análisis de causas raíz y desarrollo de planes de acción para evitar recurrencias.",
+    icon: HeartPulse,
+    title: "Jornadas de Salud Laboral",
+    description:
+      "Promover Jornadas de Salud Laboral diseñadas para el bienestar y la prevención en el entorno de trabajo. A través de actividades prácticas, evaluaciones básicas de salud y charlas educativas.",
   },
-]
+];
 
 export function Services() {
   return (
@@ -76,6 +96,15 @@ export function Services() {
               </CardContent>
             </Card>
           ))}
+        </div>
+        <div className="text-center mt-16">
+          <Button
+            size="lg"
+            className="group bg-linear-to-r from-[#69B4BB] to-[#5c9aa0] hhover:from-[#0B4791]/90 hover:to-[#69B4BB]/90 text-accent-foreground cursor-pointer"
+          >
+            Ver más servicios
+            <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 ease-out group-hover:translate-x-1" />
+          </Button>
         </div>
       </div>
     </section>
