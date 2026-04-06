@@ -9,6 +9,8 @@ import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { MapPin, Phone, Mail, Clock, Send } from "lucide-react"
 
+const whatsappNumber = "573146816353"
+
 const contactInfo = [
   {
     icon: MapPin,
@@ -139,7 +141,16 @@ export function Contact() {
                   className="bg-background resize-none"
                 />
               </div>
-              <Button type="submit" size="lg" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground cursor-pointer">
+              <Button 
+              type="button"
+              size="lg" 
+              className="w-full bg-accent hover:bg-accent/90 text-accent-foreground cursor-pointer"
+              onClick={() => {
+                const message = `Hola, me llamo ${formData.name || ' cliente'} y me gustaría obtener información. Mi email: ${formData.email || 'no proporcionado'}, Teléfono: ${formData.phone || 'no proporcionado'}, Empresa: ${formData.company || 'no proporcionada'}. Mensaje: ${formData.message || 'Sin mensaje'}`
+                const encodedMessage = encodeURIComponent(message)
+                window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank')
+              }}
+            >
                 Enviar mensaje
                 <Send className="ml-2 h-5 w-5" />
               </Button>

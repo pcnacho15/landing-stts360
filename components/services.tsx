@@ -14,6 +14,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+
+const whatsappNumber = "573146816353";
 import { Button } from "./ui/button";
 
 const services = [
@@ -98,13 +100,15 @@ export function Services() {
           ))}
         </div>
         <div className="text-center mt-16">
-          <Button
-            size="lg"
-            className="group bg-linear-to-r from-[#69B4BB] to-[#5c9aa0] hhover:from-[#0B4791]/90 hover:to-[#69B4BB]/90 text-accent-foreground cursor-pointer"
+          <a
+            href={`https://wa.me/${whatsappNumber}?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20sus%20servicios%20de%20SST`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-linear-to-r from-[#69B4BB] to-[#5c9aa0] hhover:from-[#0B4791]/90 hover:to-[#69B4BB]/90 text-accent-foreground cursor-pointer h-11 px-8"
           >
             Ver más servicios
             <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 ease-out group-hover:translate-x-1" />
-          </Button>
+          </a>
         </div>
       </div>
     </section>

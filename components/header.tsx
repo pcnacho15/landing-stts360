@@ -9,10 +9,12 @@ import Image from "next/image"
 const navLinks = [
   { href: "#inicio", label: "Inicio" },
   { href: "#servicios", label: "Servicios" },
-  { href: "#equipo", label: "Equipo" },
+  // { href: "#equipo", label: "Equipo" },
   { href: "#nosotros", label: "Nosotros" },
   { href: "#contacto", label: "Contacto" },
 ]
+
+const whatsappNumber = "573146816353"
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -48,9 +50,14 @@ export function Header() {
           </nav>
 
           <div className="hidden md:block">
-            <Button className="bg-linear-to-r from-[#69B4BB] to-[#5c9aa0] hhover:from-[#0B4791]/90 hover:to-[#69B4BB]/90 cursor-pointer text-accent-foreground">
+            <a
+              href={`https://wa.me/${whatsappNumber}?text=Hola,%20me%20interesa%20solicitar%20una%20cotización`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-linear-to-r from-[#69B4BB] to-[#5c9aa0] hhover:from-[#0B4791]/90 hover:to-[#69B4BB]/90 cursor-pointer text-accent-foreground h-10 px-4 py-2"
+            >
               Solicitar Cotización
-            </Button>
+            </a>
           </div>
 
           <button
@@ -80,9 +87,14 @@ export function Header() {
                 {link.label}
               </Link>
             ))}
-            <Button className="bg-linear-to-r from-[#69B4BB] to-[#5c9aa0] hover:from-[#0B4791]/90 hover:to-[#69B4BB]/90 text-accent-foreground w-full mt-2">
+            <a
+              href={`https://wa.me/${whatsappNumber}?text=Hola,%20me%20interesa%20solicitar%20una%20cotización`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-linear-to-r from-[#69B4BB] to-[#5c9aa0] hover:from-[#0B4791]/90 hover:to-[#69B4BB]/90 text-accent-foreground w-full mt-2 h-10 px-4 py-2"
+            >
               Solicitar Cotización
-            </Button>
+            </a>
           </nav>
         </div>
       )}

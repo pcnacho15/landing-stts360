@@ -1,5 +1,8 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight, CheckCircle } from "lucide-react"
+import Link from "next/link"
+
+const whatsappNumber = "573146816353"
 
 const benefits = [
   "Reducción de accidentes laborales",
@@ -51,20 +54,22 @@ export function Hero() {
             </ul>
 
             <div className="flex flex-col sm:flex-row gap-4 animate-bouncing">
-              <Button
-                size="lg"
-                className="group bg-linear-to-r from-[#69B4BB] to-[#5c9aa0] hhover:from-[#0B4791]/90 hover:to-[#69B4BB]/90 text-accent-foreground cursor-pointer"
+              <a
+                href={`https://wa.me/${whatsappNumber}?text=Hola,%20me%20interesa%20obtener%20información%20sobre%20sus%20servicios%20de%20SST`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-linear-to-r from-[#69B4BB] to-[#5c9aa0] hhover:from-[#0B4791]/90 hover:to-[#69B4BB]/90 text-accent-foreground cursor-pointer h-11 px-8"
               >
                 Comenzar ahora
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 ease-out group-hover:translate-x-1" />
-              </Button>
-              <Button
+              </a>
+              {/* <Button
                 size="lg"
                 variant="outline"
                 className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 bg-transparent cursor-pointer"
               >
                 Conocer más
-              </Button>
+              </Button> */}
             </div>
           </div>
 
